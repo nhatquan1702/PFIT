@@ -98,7 +98,7 @@
                                     android:text="Bmi"
                                     android:textColor="@color/black"
                                     android:fontFamily="@font/baloo"
-                                    android:textSize="16dp"
+                                    android:textSize="16sp"
                                     android:layout_marginLeft="5dp"
                                     android:layout_height="wrap_content"
                                     android:layout_toLeftOf="@+id/imag_4"/>
@@ -153,12 +153,13 @@
                                         <TextView
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
-                                            android:textAlignment="center"
                                             android:layout_below="@+id/progressBar"
                                             android:layout_centerHorizontal="true"
                                             android:layout_marginTop="8dp"
-                                            android:text="Thể trạng bình thường"
                                             android:layout_marginBottom="10dp"
+                                            android:text="Thể trạng bình thường"
+                                            android:textAlignment="center"
+                                            android:textSize="14sp"
                                             android:textColor="@color/grey_calendar"
                                             android:typeface="serif" />
 
@@ -232,7 +233,7 @@
                                     android:fontFamily="@font/baloo"
                                     android:text="Nước"
                                     android:textColor="@color/black"
-                                    android:textSize="16dp" />
+                                    android:textSize="16sp" />
 
 
                             </RelativeLayout>
@@ -269,7 +270,7 @@
                                 android:text="Lượng nước hấp thu"
                                 android:textAlignment="center"
                                 android:textColor="@color/grey_calendar"
-                                android:textSize="12dp"
+                                android:textSize="12sp"
                                 android:typeface="serif" />
 
                         </RelativeLayout>
@@ -315,7 +316,7 @@
                                     android:fontFamily="@font/baloo"
                                     android:text="Bài tập"
                                     android:textColor="@color/black"
-                                    android:textSize="16dp" />
+                                    android:textSize="16sp" />
 
 
                             </RelativeLayout>
@@ -350,7 +351,7 @@
                                         android:text="0.0%"
                                         android:textAlignment="center"
                                         android:textColor="@color/black"
-                                        android:textSize="16dp" />
+                                        android:textSize="16sp" />
 
                                 </RelativeLayout>
 
@@ -363,22 +364,24 @@
                                 android:layout_above="@+id/txt_excer"
                                 android:text="00 Ngày còn lại"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
-                                android:textSize="14dp" />
+                                android:textColor="@color/dot_dark_screen"
+                                android:textSize="14sp" />
 
 
                             <TextView
                                 android:id="@+id/txt_excer"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
                                 android:layout_alignParentBottom="true"
                                 android:layout_marginTop="3dp"
-                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="0dp"
+                                android:layout_marginBottom="6dp"
                                 android:singleLine="true"
                                 android:text="Qúa trình rèn luyện"
                                 android:textAlignment="center"
                                 android:textColor="@color/grey_calendar"
-                                android:textSize="12dp"
+                                android:textSize="12sp"
                                 android:typeface="serif" />
 
                         </RelativeLayout>

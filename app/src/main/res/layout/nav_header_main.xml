@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
-        android:text="PFIT Khỏe mạnh và cân đối"
+        android:text="PFIT khỏe mạnh và cân đối"
         android:textSize="14sp"
         android:fontFamily="@font/kanit"
         android:textStyle="bold"

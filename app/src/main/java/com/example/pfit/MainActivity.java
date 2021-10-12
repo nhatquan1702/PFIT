@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         setContentView(R.layout.activity_main);
 
         this.navigationView = (NavigationView) findViewById(R.id.nav_views);
-        this.imageView1 = (ImageView) findViewById(R.id.setting);
+        //this.imageView1 = (ImageView) findViewById(R.id.setting);
         this.toolbar = initToolbar();
         DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         this.drawer = drawerLayout;
@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         this.navigationView.setNavigationItemSelectedListener(this);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
         this.bottomNavigation = bottomNavigationView;
+        bottomNavigationView.setSelectedItemId(R.id.navigation_home);
         bottomNavigationView.setOnNavigationItemSelectedListener(this.navigationItemSelectedListener);
         String str2 = "";
         openFragment(Fragment_Home.newInstance(str2 ,str2));
