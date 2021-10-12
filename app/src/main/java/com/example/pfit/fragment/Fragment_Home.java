@@ -1,0 +1,112 @@
+package com.example.pfit.fragment;
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
+import android.os.Handler;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.example.pfit.MainActivity;
+import com.example.pfit.R;
+import com.example.pfit.SlidingAdapter;
+import com.example.pfit.SlidingModel;
+
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link Fragment_Home#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class Fragment_Home extends Fragment {
+    private int[] myImageList = new int[]{R.drawable.banner_1, R.mipmap.banner_calculator, R.mipmap.banner_3, R.mipmap.img_reminder};
+    private ArrayList<SlidingModel> imageModelArrayList;
+    private static ViewPager mPager;
+    private static int currentPage = 0;
+    private static int NUM_PAGES = 0;
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    private String mParam1;
+    private String mParam2;
+
+    public Fragment_Home() {
+        // Required empty public constructor
+    }
+    MainActivity mainAcdsctivity;
+    public Fragment_Home(MainActivity mainActivity) {
+        this.mainAcdsctivity = mainActivity;
+    }
+    public static Fragment_Home newInstance(String str, String str2, MainActivity mainActivity) {
+        Fragment_Home mainFragment = new Fragment_Home(mainActivity);
+        Bundle bundle = new Bundle();
+        bundle.putString(ARG_PARAM1, str);
+        bundle.putString(ARG_PARAM2, str2);
+        mainFragment.setArguments(bundle);
+        return mainFragment;
+    }
+    public static Fragment_Home newInstance(String param1, String param2) {
+        Fragment_Home fragment = new Fragment_Home();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+            imageModelArrayList = new ArrayList<>();
+            imageModelArrayList = populateList();
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        mPager = view.findViewById(R.id.pager);
+        //        walk and steps report
+
+        mPager.setAdapter(new SlidingAdapter(getActivity(), imageModelArrayList));
+
+        NUM_PAGES = imageModelArrayList.size();
+
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == NUM_PAGES) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, false);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 4000, 4000);
+
+        return view;
+    }
+    //   first view pager
+
+    private ArrayList<SlidingModel> populateList() {
+        ArrayList<SlidingModel> list = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            SlidingModel imageModel = new SlidingModel();
+            imageModel.setImage_drawable(myImageList[i]);
+            list.add(imageModel);
+        }
+        return list;
+    }
+}
