@@ -37,11 +37,16 @@
                     android:layout_margin="15dp"
                     app:cardCornerRadius="20dp"
                     sweet:cardMaxElevation="20dp">
-
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/pager"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        sweet:cardCornerRadius="20dp">
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </androidx.cardview.widget.CardView>
+
                 </RelativeLayout>
 
 
@@ -73,6 +78,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/colorWhite"
                             android:orientation="vertical">
 
 
@@ -205,6 +211,7 @@
 
                         <RelativeLayout
                             android:id="@+id/rel_two"
+                            android:background="@color/colorWhite"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
@@ -289,6 +296,7 @@
 
                         <RelativeLayout
                             android:id="@+id/rel_three"
+                            android:background="@color/colorWhite"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 

@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         }else  if(itemId == R.id.nav_privacy)
         {
             //Liên kết tới trang điều khoản sử dụng
-            Uri uri = Uri.parse("https://crazytrendsapp.blogspot.com/");
+            Uri uri = Uri.parse("https://drive.google.com/file/d/1DvztngmjDeNSvOxqPcA82-6h2sa8o3Ok/view?usp=sharing");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         }

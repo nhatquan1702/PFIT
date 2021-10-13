@@ -25,7 +25,7 @@ import java.util.TimerTask;
  * create an instance of this fragment.
  */
 public class Fragment_Home extends Fragment {
-    private int[] myImageList = new int[]{R.drawable.banner_1, R.mipmap.banner_calculator, R.mipmap.banner_3, R.mipmap.img_reminder};
+    private int[] myImageList = new int[]{R.drawable.banner_1, R.mipmap.banner_calculator, R.mipmap.banner_3, R.mipmap.img_reminder, R.mipmap.banner_reminder, };
     private ArrayList<SlidingModel> imageModelArrayList;
     private static ViewPager mPager;
     private static int currentPage = 0;
@@ -102,7 +102,7 @@ public class Fragment_Home extends Fragment {
 
     private ArrayList<SlidingModel> populateList() {
         ArrayList<SlidingModel> list = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             SlidingModel imageModel = new SlidingModel();
             imageModel.setImage_drawable(myImageList[i]);
             list.add(imageModel);

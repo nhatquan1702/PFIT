@@ -3,10 +3,10 @@
     xmlns:aapt="http://schemas.android.com/aapt"
     xmlns:sweet="http://schemas.android.com/apk/res-auto">
 
-<!--    <item-->
-<!--        android:id="@+id/nav_manage"-->
-<!--        android:icon="@mipmap/privacy_app"-->
-<!--        android:title="Quản trị" />-->
+    <item
+        android:id="@+id/nav_manage"
+        android:icon="@mipmap/manager_app"
+        android:title="Quản trị" />
 
     <item
         android:id="@+id/nav_share"
@@ -24,12 +24,12 @@
 
     <item
         android:id="@+id/nav_account"
-        android:icon="@mipmap/privacy_app"
+        android:icon="@mipmap/account_app"
         android:title="Tài khoản" />
 
     <item
         android:id="@+id/nav_setting"
-        android:icon="@mipmap/ic_setting"
+        android:icon="@mipmap/setiing_app"
         android:title="Cài đặt" />
 
 
