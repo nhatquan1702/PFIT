@@ -27,4 +27,7 @@
     <string name="notif_messsage_hint">Điền vào lời nhắc</string>
     <string name="notif_tone_hint">Notification Tone</string>
     <string name="notif_freq_hint">Notification Frequency</string>
+    <string name="search">Tìm kiếm bài tập</string>
+    <string name="font_bold">fonts/proximanova_bold.otf</string>
+    <string name="font_light">fonts/proximanova_light.otf</string>
 </resources>
