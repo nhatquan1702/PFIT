@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PFIT">
         <activity
+            android:name=".activity.WaterActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -13,6 +13,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             switch (menuItem.getItemId()) {
                 case R.id.navigation_home:
                     toolbar.setTitle("PFIT");
-                    MainActivity.this.openFragment(Fragment_Home.newInstance(str, str));
+                    MainActivity.this.openFragment(Fragment_Home.newInstance(str, str, MainActivity.this));
                     return true;
 
                 case R.id.navigation_map:
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         bottomNavigationView.setSelectedItemId(R.id.navigation_home);
         bottomNavigationView.setOnNavigationItemSelectedListener(this.navigationItemSelectedListener);
         String str2 = "";
-        openFragment(Fragment_Home.newInstance(str2 ,str2));
+        openFragment(Fragment_Home.newInstance(str2 ,str2, MainActivity.this));
     }
 
     public void openFragment(Fragment fragment) {
@@ -164,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         return true;
     }
 
-
+    @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Thoát ứng dụng");

@@ -4,20 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/a1_grad.xml" value="0.18888888888888888" />
+        <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/a2_grad.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/custom_progressbar_drawable.xml" value="0.215625" />
+        <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/ic_bell.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/ic_directions_run.xml" value="0.2123076923076923" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/ic_directions_walk_65black_30dp.xml" value="0.2123076923076923" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/ic_more_vert_black_24dp.xml" value="0.2123076923076923" />
+        <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/ic_plus_solid.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/selector.xml" value="0.215625" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/selector1.xml" value="0.215625" />
+        <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/drawable/textinput_bg.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/activity_main.xml" value="0.14145543744889616" />
+        <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/activity_water.xml" value="0.5" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/adview_layout_exit.xml" value="0.1" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/card_bmi_default_item.xml" value="0.1" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/card_bmi_item_default.xml" value="0.16168478260869565" />
+        <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/content_main.xml" value="0.16983695652173914" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment__daily_1.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment__excercise.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment__process.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment__reminder.xml" value="0.16621376811594202" />
+        <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.22" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment_daily.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/nhatm/AndroidStudioProjects/PFIT/app/src/main/res/layout/fragment_workout.xml" value="0.16621376811594202" />

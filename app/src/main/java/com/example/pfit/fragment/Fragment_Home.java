@@ -1,5 +1,7 @@
 package com.example.pfit.fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,11 +11,15 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.example.pfit.MainActivity;
 import com.example.pfit.R;
 import com.example.pfit.SlidingAdapter;
 import com.example.pfit.SlidingModel;
+import com.example.pfit.activity.WaterActivity;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -35,6 +41,7 @@ public class Fragment_Home extends Fragment {
 
     private String mParam1;
     private String mParam2;
+    RelativeLayout rel_one, rel_two, rel_three;
 
     public Fragment_Home() {
         // Required empty public constructor
@@ -51,14 +58,14 @@ public class Fragment_Home extends Fragment {
         mainFragment.setArguments(bundle);
         return mainFragment;
     }
-    public static Fragment_Home newInstance(String param1, String param2) {
-        Fragment_Home fragment = new Fragment_Home();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+//    public static Fragment_Home newInstance(String param1, String param2) {
+//        Fragment_Home fragment = new Fragment_Home();
+//        Bundle args = new Bundle();
+//        args.putString(ARG_PARAM1, param1);
+//        args.putString(ARG_PARAM2, param2);
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,6 +80,35 @@ public class Fragment_Home extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         mPager = view.findViewById(R.id.pager);
+
+        //Thể trạng
+        rel_one = (RelativeLayout) view.findViewById(R.id.rel_one);
+        rel_one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                diaLogBottom().show();
+            }
+        });
+
+        //Lượng nước uống
+        rel_two = (RelativeLayout) view.findViewById(R.id.rel_two);
+        rel_two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), WaterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //tập luyện
+        rel_three = (RelativeLayout) view.findViewById(R.id.rel_three);
+        rel_three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainAcdsctivity.loadFragmentworkout(new Fragment_Workout());
+            }
+        });
+
         //        walk and steps report
 
         mPager.setAdapter(new SlidingAdapter(getActivity(), imageModelArrayList));
@@ -108,5 +144,19 @@ public class Fragment_Home extends Fragment {
             list.add(imageModel);
         }
         return list;
+    }
+    public BottomSheetDialog diaLogBottom() {
+        BottomSheetDialog sheetDialog = new BottomSheetDialog(getContext(), R.style.SheetDialog);
+        View viewDialog = getLayoutInflater().inflate(R.layout.fragment_bottom_sheet, null);
+        sheetDialog.setContentView(viewDialog);
+        BottomSheetBehavior mBehavior = BottomSheetBehavior.from((View) viewDialog.getParent());
+        mBehavior.setPeekHeight(2000);
+        viewDialog.findViewById(R.id.btnUpdate).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sheetDialog.dismiss();
+            }
+        });
+        return sheetDialog;
     }
 }
